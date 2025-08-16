@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Punit Punde — Portfolio</title>
+  <meta name="description" content="Portfolio of Punit Punde — Software Developer (Java, Spring Boot, React). Projects, experience, achievements, and contact." />
+  <meta property="og:title" content="Punit Punde — Portfolio" />
+  <meta property="og:description" content="Software Developer (Java, Spring Boot, React). Projects, experience, achievements, and contact." />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root{
+      --bg:#0b1220;--card:#0f172a;--muted:#94a3b8;--text:#e2e8f0;--brand:#f97316;--brand-2:#fb923c;--ring:#22d3ee;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    body{background:radial-gradient(1200px 800px at 80% -20%,rgba(36,99,235,.12),transparent 60%),radial-gradient(900px 600px at -10% 10%,rgba(236,72,153,.10),transparent 60%),var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1080px;margin:0 auto;padding:24px}
+    .nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(12px);background:linear-gradient(180deg,rgba(15,23,42,.9),rgba(15,23,42,.65));border-bottom:1px solid rgba(148,163,184,.15);z-index:10}
+    .nav .inner{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:12px 24px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+    .logo-badge{width:28px;height:28px;border-radius:10px;background:conic-gradient(from 200deg,var(--brand),var(--brand-2),#22d3ee,var(--brand));display:grid;place-items:center;color:#0b1220;font-weight:900}
+    .nav a.btn{padding:8px 14px;border:1px solid rgba(148,163,184,.25);border-radius:12px}
+    .grid{display:grid;gap:20px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:48px 0}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));border:1px solid rgba(148,163,184,.15);border-radius:18px;padding:22px}
+    .shadow{box-shadow:0 30px 80px rgba(2,6,23,.45), inset 0 1px 0 rgba(255,255,255,.04)}
+    h1{font-size:40px;line-height:1.15;margin:0 0 10px}
+    .subtitle{color:var(--muted);font-size:16px;margin-bottom:22px}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px dashed rgba(148,163,184,.35);border-radius:999px;color:#cbd5e1;font-size:12px;margin-right:8px}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:14px;border:1px solid rgba(148,163,184,.25);font-weight:600}
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#0b1220;border:none}
+    .btn:focus{outline:3px solid var(--ring);outline-offset:2px}
+    .section{margin:22px 0}
+    .section h2{font-size:22px;margin:0 0 8px}
+    .list{display:grid;gap:14px}
+    .item{display:grid;gap:8px;padding:14px;border:1px solid rgba(148,163,184,.15);border-radius:14px;background:rgba(2,6,23,.2)}
+    .item .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .kpi{padding:14px;border-radius:16px;background:linear-gradient(180deg,rgba(2,132,199,.12),rgba(2,132,199,.06));border:1px solid rgba(148,163,184,.2);text-align:center}
+    .kpi .big{font-size:22px;font-weight:800}
+    .projects{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .project{grid-column:span 6;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));border:1px solid rgba(148,163,184,.18);border-radius:18px;padding:18px}
+    .project h3{margin:0 0 6px}
+    .project .stack{color:var(--muted);font-size:13px;margin-bottom:10px}
+    .project .actions{display:flex;gap:10px;margin-top:10px}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{padding:8px 12px;border-radius:999px;background:rgba(148,163,184,.12);border:1px solid rgba(148,163,184,.2);font-size:13px}
+    .achv{display:grid;gap:10px}
+    .footer{margin:40px 0 10px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width: 900px){.hero{grid-template-columns:1fr}.projects .project{grid-column:span 12}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="inner container">
+      <div class="logo"><span class="logo-badge">PP</span> Punit Punde</div>
+      <nav class="links" aria-label="Primary">
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#experience">Experience</a>
+        <a class="btn" href="#achievements">Achievements</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card shadow">
+        <h1>Software Developer — Java • Spring Boot • React</h1>
+        <p class="subtitle">Building scalable backends and clean UIs. Strong focus on microservices, performance, and developer experience.</p>
+        <div>
+          <span class="tag">B.Tech CSE (AI & ML), CGPA 8.14</span>
+          <span class="tag">SDE Intern @ Vidyayatan Technologies</span>
+          <span class="tag">Bhopal, India</span>
+        </div>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Hire Me</a>
+          <a class="btn" href="https://github.com/punitpunde" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://linkedin.com/in/punitpunde" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="kpis">
+          <div class="kpi"><div class="big">1000+</div><div>LeetCode problems</div></div>
+          <div class="kpi"><div class="big">1996</div><div>LeetCode peak</div></div>
+          <div class="kpi"><div class="big">1660</div><div>Codeforces peak</div></div>
+          <div class="kpi"><div class="big">1922</div><div>GFG rating</div></div>
+        </div>
+        <div class="card">
+          <div class="section">
+            <h2>Tech Snapshot</h2>
+            <div class="skills">
+              <span class="skill">Java (SE/EE)</span>
+              <span class="skill">Spring Boot</span>
+              <span class="skill">React</span>
+              <span class="skill">Redux</span>
+              <span class="skill">Kafka</span>
+              <span class="skill">MySQL</span>
+              <span class="skill">PostgreSQL</span>
+              <span class="skill">Docker</span>
+              <span class="skill">Kubernetes</span>
+              <span class="skill">Jenkins</span>
+              <span class="skill">AWS (S3 • RDS • SES)</span>
+              <span class="skill">Git/GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Featured Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Bharat Payments — Payment App</h3>
+          <div class="stack">Java • Spring Boot • React • Kafka • MySQL • JWT</div>
+          <p>UPI-based payment platform for bill payments, recharges, and bank transfers. Microservices architecture with secure transactions and inter-service communication via Kafka.</p>
+          <div class="actions">
+            <a class="btn" href="https://bharatpayui2.netlify.app/" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </article>
+        <article class="project">
+          <h3>Bank of Bharat — Core Banking</h3>
+          <div class="stack">Java • Spring Boot • JWT • RBAC</div>
+          <p>Banking application with user auth, account management, and transaction processing. Emphasis on security via JWT and role-based access control.</p>
+        </article>
+        <article class="project">
+          <h3>Ship‑Shop — E‑Commerce Web App</h3>
+          <div class="stack">React • Redux • Bootstrap</div>
+          <p>Responsive app with product listings, search, cart, and secure checkout for smooth user experience.</p>
+          <div class="actions">
+            <a class="btn" href="https://style-sphere-gulshan.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="list">
+        <div class="item">
+          <div><strong>Software Development Engineer Intern</strong> — Vidyayatan Technologies <span class="meta">Nov 2024 – Present • Bhopal</span></div>
+          <ul>
+            <li>Optimized Spring Boot backend, improving performance by ~20% and cutting response times by ~30%.</li>
+            <li>Leveraged AWS (S3, RDS, SES) for scalable storage, DB management, and email handling.</li>
+            <li>Implemented secure auth with JWT & OAuth 2.0; enabled role-based access control.</li>
+            <li>Integrated Stripe for invoicing & payments; shipped 200+ REST APIs across microservices.</li>
+            <li>Integrated DeepSeek AI for automated evaluation workflows across users.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="list">
+        <div class="item">
+          <div><strong>Oriental Institute of Science and Technology</strong> — B.Tech CSE (AI & ML)</div>
+          <div class="meta">Sep 2022 – Jun 2026 • CGPA: 8.14 • Bhopal</div>
+        </div>
+        <div class="item">
+          <div><strong>Govt Higher Secondary School, Betul</strong> — PCM</div>
+          <div class="meta">Jun 2021 – Apr 2022 • Percentage: 91.4%</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="section">
+      <h2>Competitive Coding & Achievements</h2>
+      <div class="achv">
+        <div class="item">
+          <ul>
+            <li>Global Rank 76 / 15,000 — Codeforces Round 1032 (Div. 3).</li>
+            <li>Global Rank 406 / 13,000 — Codeforces Round 1033 (Div. 2) & CodeNite 2025.</li>
+            <li>Global Rank 498 / 22,000 — LeetCode Weekly Contest 448.</li>
+            <li>Global Rank 586 / 29,000 — LeetCode Weekly Contest 421.</li>
+            <li>LeetCode 1000+ problems solved (Peak 1996 — Knight, top 2.67%).</li>
+            <li>Codeforces Peak 1660 (Expert) • GFG Peak 1922 • CodeChef Peak 1642 (3★).</li>
+          </ul>
+          <div class="cta">
+            <a class="btn" href="https://leetcode.com/u/PunitPunde/" target="_blank" rel="noopener">LeetCode</a>
+            <a class="btn" href="https://codeforces.com/profile/punitpunde" target="_blank" rel="noopener">Codeforces</a>
+            <a class="btn" href="https://www.geeksforgeeks.org/user/punitpunde/" target="_blank" rel="noopener">GeeksforGeeks</a>
+            <a class="btn" href="https://www.codechef.com/users/punitpunde" target="_blank" rel="noopener">CodeChef</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="item">
+        <p>Open to SDE/SWE internships and roles in backend, full‑stack, and platform engineering.</p>
+        <div class="skills" style="margin-top:6px">
+          <a class="skill" href="mailto:punitpunde123@gmail.com">punitpunde123@gmail.com</a>
+          <span class="skill">+91 91715 35016</span>
+          <a class="skill" href="https://github.com/punitpunde" target="_blank" rel="noopener">GitHub</a>
+          <a class="skill" href="https://linkedin.com/in/punitpunde" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">© <span id="yr"></span> Punit Punde · Built with vanilla HTML & CSS · Deployed on Netlify</p>
+  </main>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
